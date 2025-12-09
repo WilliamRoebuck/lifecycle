@@ -62,7 +62,7 @@ Static Architecture
    :safety: ASIL_B
    :status: valid
    :implements:
-   :fulfils: comp_req__health_monitor__placeholder
+   :fulfils: comp_req__health_monitor__dummy
    :includes:
 
    .. uml::  assets/dm_static_architecture.puml
@@ -73,7 +73,7 @@ Static Architecture
    :safety: ASIL_B
    :status: valid
    :implements:
-   :fulfils: comp_req__health_monitor__placeholder
+   :fulfils: comp_req__health_monitor__dummy
    :includes:
 
    .. uml::  assets/lm_static_architecture.puml
@@ -84,7 +84,7 @@ Static Architecture
    :safety: ASIL_B
    :status: valid
    :implements:
-   :fulfils: comp_req__health_monitor__placeholder
+   :fulfils: comp_req__health_monitor__dummy
    :includes:
 
    .. uml::  assets/hm_static_architecture.puml
@@ -97,7 +97,7 @@ Dynamic Architecture
    :security: NO
    :safety: ASIL_B
    :status: valid
-   :fulfils: comp_req__health_monitor__placeholder
+   :fulfils: comp_req__health_monitor__dummy
 
    .. uml::  assets/hm_creation.puml
 
@@ -106,7 +106,7 @@ Dynamic Architecture
    :security: NO
    :safety: ASIL_B
    :status: valid
-   :fulfils: comp_req__health_monitor__placeholder
+   :fulfils: comp_req__health_monitor__dummy
 
    .. uml::  assets/dm_usage.puml
 
@@ -115,7 +115,7 @@ Dynamic Architecture
    :security: NO
    :safety: ASIL_B
    :status: valid
-   :fulfils: comp_req__health_monitor__placeholder
+   :fulfils: comp_req__health_monitor__dummy
 
    .. uml::  assets/lm_usage.puml
 
@@ -127,7 +127,7 @@ Interfaces
    :security: NO
    :safety: ASIL_B
    :status: valid
-   :fulfils: comp_req__health_monitor__placeholder
+   :fulfils: comp_req__health_monitor__dummy
    :language: rust
 
    .. uml::  assets/dm_interface.puml
@@ -137,7 +137,7 @@ Interfaces
    :security: NO
    :safety: ASIL_B
    :status: valid
-   :fulfils: comp_req__health_monitor__placeholder
+   :fulfils: comp_req__health_monitor__dummy
    :language: rust
 
    .. uml::  assets/lm_interface.puml
@@ -147,7 +147,7 @@ Interfaces
    :security: NO
    :safety: ASIL_B
    :status: valid
-   :fulfils: comp_req__health_monitor__placeholder
+   :fulfils: comp_req__health_monitor__dummy
    :language: rust
 
    .. uml::  assets/hm_interface.puml

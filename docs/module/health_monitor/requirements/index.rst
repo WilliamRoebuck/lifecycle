@@ -22,25 +22,68 @@ Requirements
    :status: draft
    :safety: ASIL_B
    :security: NO
-   :realizes: wp__requirements_comp
-   :tags: log
+   :realizes: wp__requirements_feat
+   :tags: template
 
-.. comp_req:: HealthMonitor requirements placeholder
-   :id: comp_req__health_monitor__placeholder
-   :reqtype: Functional
-   :security: NO
+.. attention::
+    The above directive must be updated according to your Feature.
+
+    - Modify ``Your Feature Name`` to be your Feature Name
+    - Modify ``id`` to be your Feature Name in upper snake case preceded by ``doc__`` and followed by ``_requirements``
+    - Adjust ``status`` to be ``valid``
+    - Adjust ``safety`` and ``tags`` according to your needs
+
+<Headlines (for the list of requirements if structuring is needed)>
+===================================================================
+
+.. stkh_req:: Dummy Stakeholder
+   :id: stkh_req__requirements__dummy
+   :reqtype: Non-Functional
    :safety: ASIL_B
-   :satisfies:
+   :security: YES
+   :rationale: Dummy
    :status: invalid
 
-   Requirement placeholder for diagram rendering.
-   To be replaced with actual requirements.
+   The platform shall ...
 
-.. needextend:: "health_monitor" in id
+
+.. feat_req:: Dummy Feature
+   :id: feat_req__requirements__template
+   :reqtype: Non-Functional
+   :safety: ASIL_B
+   :security: YES
+   :satisfies: stkh_req__requirements__dummy
+   :status: invalid
+
+    Dummy
+
+.. comp_req:: Dummy Component
+   :id: comp_req__health_monitor__dummy
+   :reqtype: Process
+   :security: YES
+   :safety: ASIL_B
+   :satisfies: feat_req__requirements__template
+   :status: invalid
+
+   The Feature shall do xyz to the user to bring him to this condition at this time
+
+   Note: (optional, not to be verified)
+
+.. aou_req:: Dummy AoU
+   :id: aou_req__health_monitor__dummy
+   :reqtype: Process
+   :security: YES
+   :safety: ASIL_B
+   :status: invalid
+
+   The Feature User shall do xyz to use the feature safely
+
+.. attention::
+    The above directives must be updated according to your feature requirements.
+
+    - Replace the example content by the real content for your first requirement (according to :need:`gd_guidl__req_engineering`)
+    - Set the status to valid and start the review/merge process
+    - Add other needed requirements for your feature
+
+.. needextend:: docname is not None and "health_monitor" in id
    :+tags: health_monitor
-
-
-.. _component_health_monitor_requirements_aou:
-
-AoU Requirements
-################

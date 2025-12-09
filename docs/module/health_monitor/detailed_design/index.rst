@@ -64,7 +64,7 @@ Static Diagrams for Unit Interactions
   :security: NO
   :safety: ASIL_B
   :status: valid
-  :implements: comp_req__health_monitor__placeholder
+  :implements: comp_req__health_monitor__dummy
   :satisfies: comp_arc_sta__deadline_monitor__static_view, comp_arc_sta__logic_monitor__static_view, comp_arc_sta__health_monitor__static_view
 
     .. uml::  assets/static_diagram.puml
