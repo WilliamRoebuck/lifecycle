@@ -72,7 +72,7 @@ use_format_targets()
 
 docs(
     data = [
-       "@score_process//:needs_json", # This allows linking to requirements (wp__requirements_comp, etc.) from the process_description repository.
+        "@score_process//:needs_json",  # This allows linking to requirements (wp__requirements_comp, etc.) from the process_description repository.
     ],
     source_dir = "docs",
 )
