@@ -34,14 +34,21 @@ class HealthMonitorThread  final : public IHealthMonitorThread {
 
     /// @brief Starts the Health Monitor thread.
     /// @return true if the Health Monitor started successfully, false otherwise.
-    bool start() noexcept override;
+    bool start() override;
 
     /// @brief Stops the Health Monitor thread.
-    void stop() noexcept override;
+    void stop() override;
  private:
+   void notifyInitializationComplete(
+      score::lcm::saf::daemon::EInitCode& f_init_status_r,
+      const score::lcm::saf::daemon::EInitCode f_init_result);
+   void waitForInitializationCompleted(score::lcm::saf::daemon::EInitCode& f_init_status_r);
+
     std::unique_ptr<saf::daemon::IHealthMonitor> m_health_monitor{nullptr};
     std::thread health_monitor_thread_{};
     std::atomic_bool stop_thread_{false};
+    std::mutex m_initialization_mutex{};
+    std::condition_variable m_initialization_cv{};
 };
     
 } 

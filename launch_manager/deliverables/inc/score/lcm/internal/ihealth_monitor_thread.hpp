@@ -23,8 +23,8 @@ namespace internal
 {
 class IHealthMonitorThread {
  public:
-    virtual bool start() noexcept = 0;
-    virtual void stop() noexcept = 0;
+    virtual bool start() = 0;
+    virtual void stop() = 0;
 };
 }
 }
