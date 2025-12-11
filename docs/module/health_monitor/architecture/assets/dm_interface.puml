@@ -18,14 +18,9 @@
     +new<N: AsRef<str>>(name: N) -> Self
 }
 
-+interface DeadlineMonitorHook {
-    +on_status_change(&self, from: Status, to: Status)
-}
-
 +class DeadlineMonitorBuilder {
     +new() -> Self 
     +add_deadline(&mut self, tag: Tag, min: Duration, max: Duration) -> &mut Self
-    +add_hook(&mut self, hook: Box<dyn DeadlineMonitorHook>) -> &mut Self
     +build(self) -> Result<DeadlineMonitor, Error>
 }
 
@@ -53,12 +48,9 @@
 DeadlineMonitorBuilder ..> Error
 DeadlineMonitorBuilder ..> Tag
 DeadlineMonitorBuilder ..> DeadlineMonitor : <<consumes>>
-DeadlineMonitorBuilder *-- "0..*" DeadlineMonitorHook : owns
 DeadlineMonitor *-- Status : owns
 DeadlineMonitor ..> Error
 DeadlineMonitor ..> Tag
 DeadlineMonitor ..> Deadline : <<creates>>
 DeadlineMonitor ..> DeadlineGuard : <<creates>>
-DeadlineMonitor *-- "0..*" DeadlineMonitorHook : owns
 Deadline ..> Error
-DeadlineMonitorHook ..> Status

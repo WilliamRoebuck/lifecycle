@@ -18,15 +18,9 @@
     +from_str(name: &str) -> Self
 }
 
-+interface LogicMonitorHook {
-    +on_status_change(&self, from: Status, to: Status)
-    +on_state_change(&self, from: LogicMonitorState, to: LogicMonitorState)
-}
-
 +class LogicMonitorBuilder {
     +new(initial_state: LogicMonitorState) -> Self
     +add_transition(&mut self, from: LogicMonitorState, to: LogicMonitorState) -> &mut Self
-    +add_hook(&mut self, hook: Box<dyn LogicMonitorHook>) -> &mut Self
     +build(self) -> Result<LogicMonitor, Error>
 }
 
@@ -40,11 +34,7 @@
 
 LogicMonitorBuilder ..> Error
 LogicMonitorBuilder *-- "1..*" LogicMonitorState : owns
-LogicMonitorBuilder *-- "0..*" LogicMonitorHook : owns
 LogicMonitorBuilder ..> LogicMonitor : <<consumes>>
 LogicMonitor *-- Status : owns
 LogicMonitor *-- "1..*" LogicMonitorState : owns
-LogicMonitor *-- "0..*" LogicMonitorHook : owns
 LogicMonitor ..> Error
-LogicMonitorHook ..> Status
-LogicMonitorHook ..> LogicMonitorState

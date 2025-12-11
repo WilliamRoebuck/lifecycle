@@ -3,10 +3,8 @@
 component "DeadlineMonitorBuilder"
 component "DeadlineMonitor"
 component "Deadline"
-component "DeadlineMonitorHook" <<interface>>
 
 DeadlineMonitorBuilder ..> DeadlineMonitor : build
-DeadlineMonitor ..> DeadlineMonitorHook : call on change
 DeadlineMonitor ..> Deadline : generate and check
 
 @enduml
