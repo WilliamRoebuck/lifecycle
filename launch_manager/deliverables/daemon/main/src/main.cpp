@@ -94,7 +94,7 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char const* argv[]) {
         std::unique_ptr<score::lcm::internal::IHealthMonitorThread> healthMonitorThread{
             std::make_unique<score::lcm::internal::HealthMonitorThread>(std::move(healthMonitor))};
 
-        std::unique_ptr<ProcessGroupManager> process_group_manager = std::make_unique<ProcessGroupManager>(std::move(healthMonitorThread), std::make_shared<score::lcm::RecoveryClient>());
+        std::unique_ptr<ProcessGroupManager> process_group_manager = std::make_unique<ProcessGroupManager>(std::move(healthMonitorThread), recoveryClient);
 
         if (initializeLCMDaemon(*process_group_manager)) {
             if (runLCMDaemon(*process_group_manager)) {
