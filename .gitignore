@@ -68,7 +68,12 @@ target/
 tests/**/*.html
 tests/**/*.xml
 
-# VS Code files
+# IDE Code files
 .vscode*
 *.orig
 .venv_docs
+MODULE.lock.bazel
+_build/
+.clwb
+.idea
+external

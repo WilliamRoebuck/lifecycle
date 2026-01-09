@@ -11,8 +11,4 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-pub mod errors;
-pub mod monitor;
-
-pub use errors::ConstructorError;
-pub use monitor::Monitor;
+#include "src/lifecycle_client_lib/include/runapplication.h"

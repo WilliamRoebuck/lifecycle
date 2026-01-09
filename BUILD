@@ -49,6 +49,7 @@ filegroup(
         "//rust_bindings/lifecycle_client_rs",
         "//rust_bindings/monitor_rs",
         "//src/health_monitoring_lib",
+        "//src/lifecycle_client_lib",
     ],
 )
 

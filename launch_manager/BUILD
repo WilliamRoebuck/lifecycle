@@ -76,7 +76,7 @@ cc_binary_with_common_opts(
     visibility = ["//visibility:public"],
     deps = [
         ":deliverables_includes",
-        "//external/ipc_dropin",
+        "//externals/ipc_dropin",
         "//health_monitor",
         "@flatbuffers",
         "@score_baselibs//score/mw/log",
@@ -158,7 +158,7 @@ cc_library(
     visibility = ["//visibility:public"],
     deps = [
         ":deliverables_includes",
-        "//external/ipc_dropin",
+        "//externals/ipc_dropin",
         "@score_baselibs//score/concurrency/future",
     ],
 )
@@ -178,7 +178,7 @@ cc_library(
     visibility = ["//visibility:public"],
     deps = [
         ":deliverables_includes",
-        "//external/ipc_dropin",
+        "//externals/ipc_dropin",
         "@score_baselibs//score/mw/log",
         "@score_baselibs//score/result",
     ],
