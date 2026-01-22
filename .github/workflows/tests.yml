@@ -12,11 +12,8 @@
 # *******************************************************************************
 
 name: Tests
-on:
-  pull_request_target:
-    types: [opened, reopened, synchronize]
-  merge_group:
-    types: [checks_requested]
+on: [push]
+
 jobs:
   tests:
     steps:
