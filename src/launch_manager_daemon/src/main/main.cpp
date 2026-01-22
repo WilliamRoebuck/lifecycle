@@ -37,7 +37,7 @@ bool initializeLCMDaemon(ProcessGroupManager& process_group_manager) {
         LM_LOG_INFO() << "LCM started successfully";
         return true;
     } else {
-        LM_LOG_FATAL() << "LCM startup failed";
+        LM_LOG_FATAL() << "LCM startup failed!!!!";
         return false;
     }
 }
