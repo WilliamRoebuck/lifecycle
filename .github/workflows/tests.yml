@@ -20,18 +20,10 @@ on:
 jobs:
   tests:
     steps:
-      - name: "Run Rust tests"
+      - name: "Run tests"
         uses: eclipse-score/cicd-workflows/.github/workflows/tests.yml@main
         permissions:
           contents: read
           pull-requests: read
         with:
-          bazel-target: 'test //src/...'
-
-      - name: "Run Unit tests"
-        uses: eclipse-score/cicd-workflows/.github/workflows/tests.yml@main
-        permissions:
-          contents: read
-          pull-requests: read
-        with:
-          bazel-target: 'test //tests/ut/...'
+          bazel-target: 'test //src/... //tests/ut/...'
