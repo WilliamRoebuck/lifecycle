@@ -48,7 +48,6 @@ jobs:
       upload-name: 'bazel-testlogs'
   build-docs:
     needs: run-tests
-    if: ${{ always() }}
     uses: eclipse-score/cicd-workflows/.github/workflows/docs.yml@main
     permissions:
       contents: write
